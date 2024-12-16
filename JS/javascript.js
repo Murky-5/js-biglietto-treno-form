@@ -33,19 +33,23 @@ submittedElm.addEventListener("submit", (sub) => {
     console.log(userInput[1])
     console.log(userInput[2])
 
-    if (userInput[2] = "under_age") {
+    if (userInput[2] === "under_age") {
         priceElm.innerHTML(`${userInput[1] * 0.2}`)
-    } else if (userInput[2] = "over_65") {
+    } else if (userInput[2] === "over_65") {
         priceElm.innerHTML(`${userInput[1] * 0.7}`)
-    } else if (userInput[2] = "grown") {
-        priceElm.innerHTML(`${userInput[2]}`)
+    } else if (userInput[2] === "grown") {
+        priceElm.innerHTML("Maggiorenne")
     }
 
     offerElm.innerHTML(userInput[2])
     cabinElm.innerHTML(cabinNum)
     opElm.innerHTML(opNum)
 })
-/* 
-undoElm.addEventListener("click", () => {
 
-}) */
+
+undoElm.addEventListener("click", () => {
+    priceElm.innerHTML("")
+    offerElm.innerHTML("")
+    cabinElm.innerHTML("")
+    opElm.innerHTML("")
+})
